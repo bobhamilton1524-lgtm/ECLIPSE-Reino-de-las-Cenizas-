@@ -1,4 +1,8 @@
 run = "npm run dev"
+modules = ["nodejs-20"]
 
 [deployment]
 run = "npm run dev"
+
+[[ports]]
+localPort = 5000
