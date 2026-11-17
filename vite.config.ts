@@ -5,6 +5,7 @@ import { dirname, resolve } from 'node:path';
 const rootDir = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
+  base: '/ECLIPSE-Reino-de-las-Cenizas-/',
   resolve: { alias: { '@': resolve(rootDir, 'src') } },
   server: { host: '0.0.0.0', port: 5000, strictPort: true },
   preview: { host: true },

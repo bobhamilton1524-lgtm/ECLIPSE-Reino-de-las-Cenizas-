@@ -24,7 +24,7 @@ export class MainMenuScene extends Phaser.Scene {
       fontFamily: 'monospace', fontSize: '9px', color: '#d5cbbb',
     }).setOrigin(0.5);
     this.tweens.add({ targets: hint, alpha: 0.35, duration: 850, yoyo: true, repeat: -1 });
-    const start = (): void => this.scene.start('World');
+    const start = (): void => { this.scene.start('World'); };
     this.input.once('pointerdown', start);
     this.input.keyboard?.once('keydown-SPACE', start);
     this.input.keyboard?.once('keydown-ENTER', start);

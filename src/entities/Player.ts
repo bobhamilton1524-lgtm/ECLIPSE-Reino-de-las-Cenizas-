@@ -4,14 +4,14 @@ import type { InputManager } from '@/core/InputManager';
 
 /** Personaje provisional del Sprint 0; se sustituirá por sprites animados. */
 export class Player extends Phaser.GameObjects.Container {
-  private input: InputManager;
+  private inputManager: InputManager;
   private bodyRect: Phaser.GameObjects.Rectangle;
   private shadow: Phaser.GameObjects.Ellipse;
   private physicsBody!: Phaser.Physics.Arcade.Body;
 
   constructor(scene: Phaser.Scene, x: number, y: number, input: InputManager) {
     super(scene, x, y);
-    this.input = input;
+    this.inputManager = input;
     this.shadow = scene.add.ellipse(0, 7, 15, 6, 0x000000, 0.45);
     const cloak = scene.add.rectangle(0, 0, 12, 14, 0x292329).setStrokeStyle(1, 0x6e3434);
     this.bodyRect = scene.add.rectangle(0, -2, 7, 8, COLORS.PLAYER);
@@ -27,7 +27,7 @@ export class Player extends Phaser.GameObjects.Container {
   }
 
   update(_time: number, _delta: number): void {
-    const direction = this.input.getMovement();
+    const direction = this.inputManager.getMovement();
     this.physicsBody.setVelocity(direction.x * GAME_CONFIG.PLAYER_SPEED, direction.y * GAME_CONFIG.PLAYER_SPEED);
     this.setDepth(this.y);
     if (direction.x !== 0) this.bodyRect.setScale(direction.x < 0 ? -1 : 1, 1);

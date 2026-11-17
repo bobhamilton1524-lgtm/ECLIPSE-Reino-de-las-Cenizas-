@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ECLIPSE: Reino de las Cenizas
 
 RPG 2D de acción y fantasía oscura en pixel art. Sprint 0: base técnica jugable.
@@ -25,3 +26,7 @@ Abre la dirección local que indique Vite (normalmente `http://localhost:5173`).
 
 ## Arte externo
 Se priorizarán recursos CC0 o con licencia compatible. Revisar y registrar la licencia y atribución de cada archivo antes de distribuir el juego. Fuentes: https://opengameart.org/content/cc0-resources y https://opengameart.org/content/cc0-2d-rpg.
+=======
+# ECLIPSE-Reino-de-las-Cenizas-
+RPG de fantasía oscura desarrollado con Phaser 3 y TypeScript.
+>>>>>>> origin/main
